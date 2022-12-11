@@ -10,12 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 from environs import Env
-#from dotenv import load_dotenv
-#from dotenv import find_dotenv
-
 
 env = Env()
-#load_dotenv(find_dotenv())
 env.read_env()
 
 from pathlib import Path
@@ -50,6 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
+    'rest_framework',
+    'rest_framework_gis',
+    'providers_service_area',
 ]
 
 MIDDLEWARE = [
