@@ -25,12 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-3&i*sy%82j!qlx1b=ni)3)c#=zv=b2)2jwrtn+!a^sf5b(n8hf'
 SECRET_KEY = env('SECRET_KEY','h8+mu_iy6%5j%7+hp**+gsq$nmy!!mjd8z_qkd94@z!%9%!+qn')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = DEBUG = env.bool('DEBUG', True)
+DEBUG = env.bool('DEBUG', True)
 
 
 ALLOWED_HOSTS = ["*"]
@@ -45,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_yasg',
     'django.contrib.gis',
     'rest_framework',
     'rest_framework_gis',
@@ -66,7 +66,7 @@ ROOT_URLCONF = 'mozio_geo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

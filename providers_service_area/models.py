@@ -6,7 +6,7 @@ from django.core.validators import RegexValidator
 
 class Provider(models.Model):
     name = models.CharField(max_length=250)
-    email = models.EmailField(max_length = 254)
+    email = models.EmailField(max_length=254)
     phone_number = models.CharField(max_length=250, validators=[
         RegexValidator(regex=r'^\+?\d{8,17}$', message='Non-valid Phone Number'),])
     language = models.CharField(max_length=50)
