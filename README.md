@@ -1,4 +1,4 @@
-git # Mozio
+# Mozio
 
 ## Prompt
 
